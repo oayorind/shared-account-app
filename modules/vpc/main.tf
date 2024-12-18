@@ -32,13 +32,13 @@ resource "aws_subnet" "private_subnet" {
 }
 
 # Create Internet Gateway
-resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.my_vpc.id
+# resource "aws_internet_gateway" "igw" {
+#   vpc_id = aws_vpc.my_vpc.id
 
-  tags = {
-    Name = "My-Internet-Gateway"
-  }
-}
+#   tags = {
+#     Name = "My-Internet-Gateway"
+#   }
+# }
 
 # Create Route Table for Public Subnet
 resource "aws_route_table" "public_route_table" {
@@ -53,5 +53,6 @@ resource "aws_route_table" "public_route_table" {
     Name = "Public-Route-Table"
   }
 }
+
 
 # Associate Route Table
